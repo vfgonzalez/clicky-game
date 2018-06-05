@@ -13,10 +13,10 @@ const Title = props =>
         <ul className="nav justify-content-end">
 
             <li className="nav-item">
-                <span className="nav-link">Current Score: </span>
+                <span className="nav-link">Current Score:{props.currentScore} </span>
             </li>
             <li className="nav-item">
-                <span className="nav-link">|  Top Score: </span>
+                <span className="nav-link">|  Top Score: {props.topScore} </span>
             </li>
 
         </ul>

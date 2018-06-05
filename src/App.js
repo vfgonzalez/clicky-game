@@ -8,35 +8,39 @@ import "./App.css";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
+    friends,
+    // topScore=0,
+    // currentScore=0,
+    // chosen=[],
+    // images=[]
   };
-
-  // score=
-  // friendArr = []
 
   
-  // Change remove friend to Shuffle friend equation, and add counter, if already in array, reset counter
-//    Shuffle=  (a) => {
-//     for (let i = a.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [a[i], a[j]] = [a[j], a[i]];
-//     }
-//     return a;
-// }
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-    console.log(friends);
-    
-  };
 
+  
 
-  shuffleFriend = id =>{
-    
+  shuffleFriends = (id) => {
+
+    let a = this.state.friends;
+ 
+    // console.log("this.state.images is equal to" + a)
+ 
+    // shuffle
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+    }
+ 
+    this.setState({ friends: a });
+
+    // console.log(this.state.friends.id);
     
   }
+  
+
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -46,8 +50,7 @@ class App extends Component {
         {this.state.friends.map(friend => (
         
           <FriendCard
-            // shuffleFriend={this.shuffleFriend}
-            removeFriend={this.removeFriend}
+            shuffleFriends={this.shuffleFriends}
             id={friend.id}
             key={friend.id}
             name={friend.name}

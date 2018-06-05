@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Buzz Lightyear",
+    "image": "https://vignette.wikia.nocookie.net/parody/images/1/17/Buzz_Lightyear_toy_story.png/revision/latest?cb=20150131055205"
+  },
+  {
+    "id": 2,
+    "name": "Bullseye",
+    "image": "https://vignette.wikia.nocookie.net/toystory72/images/7/72/Bullseye.png/revision/latest?cb=201705100815241"
+  },
+  {
+    "id": 3,
+    "name": "Woody",
+    "image": "https://vignette.wikia.nocookie.net/toystory72/images/2/25/Woody.png/revision/latest?cb=20160228041314"
+  },
+  {
+    "id": 4,
+    "name": "Jessie",
+    "image": "https://s-media-cache-ak0.pinimg.com/originals/ab/1a/0b/ab1a0b24ca8238fc489286ea695adddc.jpg",
+    "isClicked":false
+  },
+  {
+    "id": 5,
+    "name": "Hamm",
+    "image": "https://cdn140.picsart.com/244090226021212.png?r1024x1024",
+    "isClicked":false
+  },
+  {
+    "id": 6,
+    "name": "Rex",
+    "image": "https://vignette.wikia.nocookie.net/parody/images/5/5b/Rex_toy_story.png/revision/latest?cb=20151103203051",
+    "isClicked":false
+  },
+  {
+    "id": 7,
+    "name": "Alien",
+    "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
+    "isClicked":false
+    
+  },
+  {
+    "id": 8,
+    "name": "Bo Peep",
+    "image": "https://vignette.wikia.nocookie.net/pixar/images/5/58/Bo_Peep.PNG/revision/latest?cb=20141203232720",
+    "isClicked":false
+  },
+  {
+    "id": 9,
+    "name": "Lotso",
+    "image": "https://vignette.wikia.nocookie.net/toy-box/images/6/6d/Lotso.png/revision/latest?cb=20100628180224",
+    "isClicked":false
+  },
+  {
+    "id": 10,
+    "name": "Mr. Potato Head",
+    "image": "https://vignette.wikia.nocookie.net/scratchpad/images/6/67/MrPotatoHead-ToyStory.png/revision/latest?cb=20130821114132",
+    "isClicked":false
+  },
+  {
+    "id": 11,
+    "name": "Stinky Pete",
+    "image": "https://vignette.wikia.nocookie.net/characters/images/7/79/Stinky_Pete.PNG/revision/latest?cb=20160717031747",
+    "isClicked":false
+  },
+  {
+    "id": 12,
+    "name": "Emperor Zurg",
+    "image": "https://vignette.wikia.nocookie.net/characters/images/0/0b/Zurg.PNG/revision/latest?cb=20160717031641",
+    "isClicked":false
+  }
+]

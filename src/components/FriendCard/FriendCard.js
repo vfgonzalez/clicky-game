@@ -2,8 +2,11 @@ import React from "react";
 import "./FriendCard.css";
 
 const FriendCard = props => (
-    <a onClick={() => props.shuffleFriends(props.id)} className="shuffle">
-  <div className="card bg-dark">
+  
+  <div onClick={(e) =>{
+    // console.log(e.target);
+    
+    props.shuffleFriends(e)}} className="card bg-dark" id={props.id}>
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
@@ -17,7 +20,7 @@ const FriendCard = props => (
     </div>
       
   </div>
-    </a>
+    
 );
 
 export default FriendCard;

@@ -9,17 +9,46 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    // topScore=0,
-    // currentScore=0,
-    // chosen=[],
-    // images=[]
+    currentScore : 0,
+    topScore : 0,
+    cardSelected : []
   };
 
+  highScore = () =>{
+    if (this.state.currentScore > this.state.topScore){
+      this.setState({topScore : this.state.currentScore})
+    }
+  }
   
+  cardSelected = () =>{
+    if (this.state.friends.id !== this.cardSelected.find(this.state.friends.id)){
+      alert("Sorry, already Chosen!")
+      this.setState({currentScore:0})
+    }else{
+      this.cardSelected.push(this.state.friends.id)
+    }
+  }
+
+  cardClicked = () =>{
+    this.setState({currentScore : this.state.currentScore +1})
+    if (this.state.currentScore > this.state.topScore){
+      this.setState({topScore : this.state.currentScore})
+    }
+  }
+
+  handleClick = (e) => {
+    this.cardClicked()
+    // this.cardSelected()
+    // this.highScore()
+    this.shuffleFriends()
+    console.log();
+    
+
+  }
 
   
 
-  shuffleFriends = (id) => {
+  shuffleFriends = () => {
 
     let a = this.state.friends;
  
@@ -35,7 +64,7 @@ class App extends Component {
     }
  
     this.setState({ friends: a });
-
+    // currentScore= +1
     // console.log(this.state.friends.id);
     
   }
@@ -46,19 +75,22 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-    <Title>Toy Story Fun!</Title>
+    <Title
+      topScore ={ this.state.topScore}
+      currentScore = {this.state.currentScore}
+    >Toy Story Fun!</Title>
         {this.state.friends.map(friend => (
-        
+          
+          
           <FriendCard
-            shuffleFriends={this.shuffleFriends}
+            shuffleFriends={this.handleClick}
             id={friend.id}
             key={friend.id}
             name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+            
           />
-        ))}
+      ))}
       </Wrapper>
     );
   }
